@@ -13,6 +13,7 @@
 		E38AEAD91E4C1B0F009812B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38AEAD71E4C1B0F009812B7 /* Main.storyboard */; };
 		E38AEADB1E4C1B0F009812B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E38AEADA1E4C1B0F009812B7 /* Assets.xcassets */; };
 		E38AEADE1E4C1B0F009812B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E38AEADC1E4C1B0F009812B7 /* LaunchScreen.storyboard */; };
+		E38AEAE81E4C1C68009812B7 /* AXWaveAnimationView.m in Sources */ = {isa = PBXBuildFile; fileRef = E38AEAE71E4C1C68009812B7 /* AXWaveAnimationView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		E38AEADA1E4C1B0F009812B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E38AEADD1E4C1B0F009812B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E38AEADF1E4C1B0F009812B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E38AEAE61E4C1C68009812B7 /* AXWaveAnimationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AXWaveAnimationView.h; sourceTree = "<group>"; };
+		E38AEAE71E4C1C68009812B7 /* AXWaveAnimationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXWaveAnimationView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		E38AEACD1E4C1B0F009812B7 /* AXWaveAnimationViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E38AEAE51E4C1C68009812B7 /* src */,
 				E38AEAD11E4C1B0F009812B7 /* AppDelegate.h */,
 				E38AEAD21E4C1B0F009812B7 /* AppDelegate.m */,
 				E38AEAD41E4C1B0F009812B7 /* ViewController.h */,
@@ -77,6 +81,15 @@
 				E38AEACF1E4C1B0F009812B7 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E38AEAE51E4C1C68009812B7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E38AEAE61E4C1C68009812B7 /* AXWaveAnimationView.h */,
+				E38AEAE71E4C1C68009812B7 /* AXWaveAnimationView.m */,
+			);
+			path = src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +166,7 @@
 				E38AEAD61E4C1B0F009812B7 /* ViewController.m in Sources */,
 				E38AEAD31E4C1B0F009812B7 /* AppDelegate.m in Sources */,
 				E38AEAD01E4C1B0F009812B7 /* main.m in Sources */,
+				E38AEAE81E4C1C68009812B7 /* AXWaveAnimationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
