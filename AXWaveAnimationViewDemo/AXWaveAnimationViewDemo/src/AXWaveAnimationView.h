@@ -16,12 +16,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly, getter=isAnimating) BOOL animating;
 
 /**
- *  初始化
- *
- *  @param frame    frame
- *  @param animated 是否自动播放动画
+ 初始化View
+
+ @param frame frame
+ @param backgroundColor 背景颜色
+ @param fillColor 填充颜色
+ @param autoPlay 是否自动播放
  */
-- (instancetype)initWithFrame:(CGRect)frame automatic:(BOOL)animated;
+- (instancetype)initWithFrame:(CGRect)frame
+              backgroundColor:(UIColor *)backgroundColor
+                    fillColor:(UIColor *)fillColor
+                    autoPlay:(BOOL)autoPlay;
 
 /**
  *  开始动画

@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "AXWaveAnimationView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) AXWaveAnimationView *animationView;
 
 @end
 
@@ -17,8 +20,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+//    self.view.backgroundColor = UIColor.lightGrayColor;
+    [self.view addSubview:self.animationView];
+    
 }
 
+- (AXWaveAnimationView *)animationView {
+    if (!_animationView) {
+        _animationView = [[AXWaveAnimationView alloc] initWithFrame:CGRectMake(0, 100, [UIScreen mainScreen].bounds.size.width, 300)
+                                                    backgroundColor:[UIColor lightGrayColor]
+                                                          fillColor:[UIColor redColor]
+                                                           autoPlay:YES];
+    }
+    return _animationView;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -22,15 +22,21 @@ typedef NS_ENUM(NSInteger, AXWaveAnimationStatus) {
 @property (nonatomic, strong) CADisplayLink *displayLink;
 @property (nonatomic, assign) BOOL animating;
 @property (nonatomic, assign) AXWaveAnimationStatus animationStatus;
+@property (nonatomic, assign) CGColorRef fillColor;
 @end
 
 @implementation AXWaveAnimationView
 
-- (instancetype)initWithFrame:(CGRect)frame automatic:(BOOL)animated {
+- (instancetype)initWithFrame:(CGRect)frame
+              backgroundColor:(UIColor *)backgroundColor
+                    fillColor:(UIColor *)fillColor
+                     autoPlay:(BOOL)autoPlay {
     if ([self initWithFrame:frame]) {
-        if (animated) {
+        if (autoPlay) {
             [self startWaveAnimation];
         }
+        self.backgroundColor = backgroundColor;
+        self.fillColor = fillColor.CGColor;
     }
     return self;
 }
@@ -126,7 +132,7 @@ typedef NS_ENUM(NSInteger, AXWaveAnimationStatus) {
 - (CAShapeLayer *)shapeLayer {
     if (!_shapeLayer) {
         _shapeLayer = [CAShapeLayer layer];
-        _shapeLayer.fillColor = [UIColor colorWithWhite:1.0f alpha:0.15f].CGColor;
+        _shapeLayer.fillColor = self.fillColor;
         [self.layer addSublayer:_shapeLayer];
     }
     return _shapeLayer;
