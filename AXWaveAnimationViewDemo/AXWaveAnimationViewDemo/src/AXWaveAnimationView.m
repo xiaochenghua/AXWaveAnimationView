@@ -20,7 +20,6 @@ typedef NS_ENUM(NSInteger, AXWaveAnimationStatus) {
 }
 @property (nonatomic, strong) CAShapeLayer *shapeLayer;
 @property (nonatomic, strong) CADisplayLink *displayLink;
-@property (nonatomic, assign) BOOL animating;
 @property (nonatomic, assign) AXWaveAnimationStatus animationStatus;
 @property (nonatomic, assign) CGColorRef fillColor;
 @end
@@ -86,7 +85,7 @@ typedef NS_ENUM(NSInteger, AXWaveAnimationStatus) {
 }
 
 - (void)pauseWaveAnimation {
-    if (!self.isAnimating) {
+    if (self.animationStatus != AXWaveAnimationStatusAnimating) {
         return;
     }
     _displayLink.paused = YES;
@@ -123,10 +122,6 @@ typedef NS_ENUM(NSInteger, AXWaveAnimationStatus) {
 - (void)displayLinkRefresh:(CADisplayLink *)displayLink {
     offsetX += 0.02;
     [self setNeedsDisplay];
-}
-
-- (BOOL)isAnimating {
-    return self.animationStatus == AXWaveAnimationStatusAnimating;
 }
 
 - (CAShapeLayer *)shapeLayer {

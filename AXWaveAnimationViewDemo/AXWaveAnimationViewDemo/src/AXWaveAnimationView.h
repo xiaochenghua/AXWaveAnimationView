@@ -10,10 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AXWaveAnimationView : UIView
-/**
- *  动画是否正在进行
- */
-@property (nonatomic, assign, readonly, getter=isAnimating) BOOL animating;
 
 /**
  初始化View
