@@ -123,6 +123,7 @@
 				TargetAttributes = {
 					E38AEACA1E4C1B0F009812B7 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = F6MKBTS8DW;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -286,6 +287,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: cheng hua xiao (KG7V4V6X7F)";
+				DEVELOPMENT_TEAM = F6MKBTS8DW;
 				INFOPLIST_FILE = AXWaveAnimationViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnoldxiao.AXWaveAnimationViewDemo;
@@ -297,6 +300,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: cheng hua xiao (KG7V4V6X7F)";
+				DEVELOPMENT_TEAM = F6MKBTS8DW;
 				INFOPLIST_FILE = AXWaveAnimationViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arnoldxiao.AXWaveAnimationViewDemo;
@@ -323,6 +328,7 @@
 				E38AEAE41E4C1B0F009812B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

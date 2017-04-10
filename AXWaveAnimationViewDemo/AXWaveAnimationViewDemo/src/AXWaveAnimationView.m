@@ -30,7 +30,7 @@ typedef NS_ENUM(NSInteger, AXWaveAnimationStatus) {
               backgroundColor:(UIColor *)backgroundColor
                     fillColor:(UIColor *)fillColor
                      autoPlay:(BOOL)autoPlay {
-    if ([self initWithFrame:frame]) {
+    if (self = [self initWithFrame:frame]) {
         if (autoPlay) {
             [self startWaveAnimation];
         }
